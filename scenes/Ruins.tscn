@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://daulyu3jhqere"]
+
+[ext_resource type="Texture2D" uid="uid://qs3e3sx7c4ko" path="res://assets/backdrop.png" id="1_nwpo1"]
+[ext_resource type="Texture2D" uid="uid://bnjaji0jmhky2" path="res://assets/floor.png" id="2_c783d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04v1a"]
+albedo_texture = ExtResource("1_nwpo1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ks02f"]
+material = SubResource("StandardMaterial3D_04v1a")
+size = Vector2(3.75, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anv0x"]
+albedo_texture = ExtResource("2_c783d")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h5qot"]
+material = SubResource("StandardMaterial3D_anv0x")
+size = Vector2(3.755, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0nwwy"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_h10j5"]
+sky_material = SubResource("ProceduralSkyMaterial_0nwwy")
+
+[sub_resource type="Environment" id="Environment_yo28b"]
+background_mode = 2
+sky = SubResource("Sky_h10j5")
+
+[node name="Riuns" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499563, 0)
+mesh = SubResource("QuadMesh_ks02f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.491706)
+mesh = SubResource("PlaneMesh_h5qot")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.947076, 0.32101, 0, -0.32101, 0.947076, 0, 0.559678, 1.39456)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yo28b")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.954787, 0.297292, 0, -0.297292, 0.954787, 0, 1.40041, 3.44932)
+light_color = Color(0.764706, 0.501961, 0.52549, 1)
+light_energy = 7.704

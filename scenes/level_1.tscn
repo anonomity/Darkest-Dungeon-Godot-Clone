@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0nhrhsuwkjc"]
+
+[ext_resource type="PackedScene" uid="uid://daulyu3jhqere" path="res://scenes/Ruins.tscn" id="1_kmn6y"]
+[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_swj63"]
+[ext_resource type="PackedScene" uid="uid://c6xd2875vf118" path="res://scenes/character.tscn" id="3_aemy6"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.756316)
+script = ExtResource("1_swj63")
+
+[node name="Riuns" parent="." instance=ExtResource("1_kmn6y")]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0892007, 0)
+
+[node name="MeshInstance3D" parent="Node3D" instance=ExtResource("3_aemy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.366, 0.192, 0.704)
+
+[node name="MeshInstance3D4" parent="Node3D" instance=ExtResource("3_aemy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.657189, 0.192, 0.704)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113362, 0.0892007, 0)
+
+[node name="MeshInstance3D" parent="Node3D2" instance=ExtResource("3_aemy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.366, 0.192, 0.704)
+
+[node name="MeshInstance3D4" parent="Node3D2" instance=ExtResource("3_aemy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.657189, 0.192, 0.704)

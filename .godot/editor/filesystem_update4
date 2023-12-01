@@ -1,0 +1,9 @@
+res://scenes/Ruins.tscn
+res://scenes/level_1.tscn
+res://scenes/level_1.gd
+res://scenes/character.tscn
+res://scripts/character.gd
+res://scripts/attack_resource.gd
+res://data/attacks/Smite.tres
+res://scenes/Crusader/crusader.tscn
+res://scenes/Character/Crusader.tscn

@@ -1,0 +1,2 @@
+attack_types
+Resource

@@ -1,0 +1,9 @@
+Node3D
+Sprite3D
+MeshInstance3D
+CanvasModulate
+DirectionalLight3D
+SpotLight3D
+LightmapProbe
+WorldEnvironment
+Camera3D
