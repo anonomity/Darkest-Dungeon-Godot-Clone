@@ -21,7 +21,4 @@ position = Vector2(12, -335)
 [node name="AnimationPlayer" parent="Crusader" index="0"]
 autoplay = "idle"
 
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(5, -334.75)
-
 [editable path="Crusader"]

@@ -1,7 +1,7 @@
 Node2D
-Node
 CollisionShape2D
 Area2D
+Node
 ColorRect
 HBoxContainer
 ProgressBar

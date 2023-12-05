@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://4rg2ge45uyfx"]
+[gd_scene load_steps=9 format=3 uid="uid://4rg2ge45uyfx"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_g2n5e"]
 [ext_resource type="PackedScene" uid="uid://bkvb4rk0ede2h" path="res://scenes/Rooms/chamber_1.tscn" id="1_wmk4q"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dpyeerw3y6dex" path="res://scenes/Heroes/Crusader.tscn" id="3_1eh4y"]
 [ext_resource type="Script" path="res://scripts/Heroes.gd" id="3_pj62c"]
 [ext_resource type="PackedScene" uid="uid://bxwm0weuxpsex" path="res://scenes/enemies/bone_courtier.tscn" id="4_ipcxt"]
+[ext_resource type="Script" path="res://scripts/Enemies.gd" id="5_5b142"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw2d8"]
+size = Vector2(75, 168)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_g2n5e")
@@ -39,13 +43,63 @@ position = Vector2(114, 386)
 [node name="Enemies" type="Node2D" parent="Chamber_1"]
 position = Vector2(1463, -6)
 scale = Vector2(-1, 1)
+script = ExtResource("5_5b142")
 
-[node name="Node2D" type="Node2D" parent="Chamber_1/Enemies"]
-position = Vector2(722, 390)
+[node name="pos_1" type="Node2D" parent="Chamber_1/Enemies"]
+position = Vector2(722, 386)
 
-[node name="bone_courtier" parent="Chamber_1/Enemies/Node2D" instance=ExtResource("4_ipcxt")]
+[node name="Enemy_1" type="Node2D" parent="Chamber_1/Enemies/pos_1"]
 
-[node name="bone_courtier2" parent="Chamber_1/Enemies" instance=ExtResource("4_ipcxt")]
-position = Vector2(605.295, 388)
+[node name="bone_courtier" parent="Chamber_1/Enemies/pos_1/Enemy_1" instance=ExtResource("4_ipcxt")]
+
+[node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chamber_1/Enemies/pos_1/Area2D"]
+position = Vector2(0.5, -52)
+shape = SubResource("RectangleShape2D_hw2d8")
+
+[node name="pos_2" type="Node2D" parent="Chamber_1/Enemies"]
+position = Vector2(618, 388)
+
+[node name="Enemy_2" type="Node2D" parent="Chamber_1/Enemies/pos_2"]
+
+[node name="bone_courtier2" parent="Chamber_1/Enemies/pos_2/Enemy_2" instance=ExtResource("4_ipcxt")]
+
+[node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chamber_1/Enemies/pos_2/Area2D"]
+position = Vector2(0.5, -52)
+shape = SubResource("RectangleShape2D_hw2d8")
+
+[node name="pos_3" type="Node2D" parent="Chamber_1/Enemies"]
+position = Vector2(514, 388)
+
+[node name="Enemy_3" type="Node2D" parent="Chamber_1/Enemies/pos_3"]
+
+[node name="bone_courtier" parent="Chamber_1/Enemies/pos_3/Enemy_3" instance=ExtResource("4_ipcxt")]
+
+[node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chamber_1/Enemies/pos_3/Area2D"]
+position = Vector2(0.5, -52)
+shape = SubResource("RectangleShape2D_hw2d8")
+
+[node name="pos_4" type="Node2D" parent="Chamber_1/Enemies"]
+position = Vector2(410, 388)
+
+[node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chamber_1/Enemies/pos_4/Area2D"]
+position = Vector2(0.5, -52)
+shape = SubResource("RectangleShape2D_hw2d8")
+
+[node name="Enemy_4" type="Node2D" parent="Chamber_1/Enemies/pos_4"]
+
+[node name="bone_courtier" parent="Chamber_1/Enemies/pos_4/Enemy_4" instance=ExtResource("4_ipcxt")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_1n6a7")]
+
+[connection signal="mouse_entered" from="Chamber_1/Enemies/pos_1/Area2D" to="Chamber_1/Enemies" method="target_enemy" binds= [0]]
+[connection signal="mouse_entered" from="Chamber_1/Enemies/pos_2/Area2D" to="Chamber_1/Enemies" method="target_enemy" binds= [1]]
+[connection signal="mouse_entered" from="Chamber_1/Enemies/pos_3/Area2D" to="Chamber_1/Enemies" method="target_enemy" binds= [2]]
+[connection signal="mouse_entered" from="Chamber_1/Enemies/pos_4/Area2D" to="Chamber_1/Enemies" method="target_enemy" binds= [3]]
