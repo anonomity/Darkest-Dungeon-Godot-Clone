@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://4rg2ge45uyfx"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_g2n5e"]
+[ext_resource type="PackedScene" uid="uid://bkvb4rk0ede2h" path="res://scenes/Rooms/chamber_1.tscn" id="1_wmk4q"]
+[ext_resource type="PackedScene" uid="uid://dbcikqedf5qg1" path="res://scenes/ui/canvas_layer.tscn" id="2_1n6a7"]
+[ext_resource type="PackedScene" uid="uid://dpyeerw3y6dex" path="res://scenes/Heroes/Crusader.tscn" id="3_1eh4y"]
+[ext_resource type="Script" path="res://scripts/Heroes.gd" id="3_pj62c"]
+[ext_resource type="PackedScene" uid="uid://bxwm0weuxpsex" path="res://scenes/enemies/bone_courtier.tscn" id="4_ipcxt"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_g2n5e")
+
+[node name="Chamber_1" parent="." instance=ExtResource("1_wmk4q")]
+position = Vector2(1, -6)
+
+[node name="Heroes" type="Node2D" parent="Chamber_1"]
+script = ExtResource("3_pj62c")
+
+[node name="pos_1" type="Node2D" parent="Chamber_1/Heroes"]
+position = Vector2(426, 386)
+
+[node name="Crusader" parent="Chamber_1/Heroes/pos_1" instance=ExtResource("3_1eh4y")]
+
+[node name="pos_2" type="Node2D" parent="Chamber_1/Heroes"]
+position = Vector2(322, 386)
+
+[node name="Crusader" parent="Chamber_1/Heroes/pos_2" instance=ExtResource("3_1eh4y")]
+
+[node name="pos_3" type="Node2D" parent="Chamber_1/Heroes"]
+position = Vector2(218, 386)
+
+[node name="Crusader" parent="Chamber_1/Heroes/pos_3" instance=ExtResource("3_1eh4y")]
+
+[node name="pos_4" type="Node2D" parent="Chamber_1/Heroes"]
+position = Vector2(114, 386)
+
+[node name="Crusader" parent="Chamber_1/Heroes/pos_4" instance=ExtResource("3_1eh4y")]
+
+[node name="Enemies" type="Node2D" parent="Chamber_1"]
+position = Vector2(1463, -6)
+scale = Vector2(-1, 1)
+
+[node name="Node2D" type="Node2D" parent="Chamber_1/Enemies"]
+position = Vector2(722, 390)
+
+[node name="bone_courtier" parent="Chamber_1/Enemies/Node2D" instance=ExtResource("4_ipcxt")]
+
+[node name="bone_courtier2" parent="Chamber_1/Enemies" instance=ExtResource("4_ipcxt")]
+position = Vector2(605.295, 388)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_1n6a7")]

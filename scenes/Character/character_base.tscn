@@ -1,10 +1,99 @@
-[gd_scene load_steps=2 format=3 uid="uid://utksyx4odi4p"]
+[gd_scene load_steps=6 format=3 uid="uid://utksyx4odi4p"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_eitk0"]
+[ext_resource type="Texture2D" uid="uid://b0ik5fbbjyixc" path="res://assets/ui/select_char_ui.png" id="2_kw07r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiv4p"]
+atlas = ExtResource("2_kw07r")
+region = Rect2(0, 0, 320, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwqle"]
+bg_color = Color(0.054902, 0.00784314, 0.00392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx6ph"]
+bg_color = Color(0.34902, 0.027451, 0.0196078, 1)
 
 [node name="character_base" type="Node2D"]
 script = ExtResource("1_eitk0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -161.0
+offset_top = 1.0
+offset_right = 159.0
+offset_bottom = 151.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_oiv4p")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_gwqle")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rx6ph")
+value = 80.0
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="stress1" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress2" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress3" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress4" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress5" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress6" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress7" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress8" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress9" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="stress10" type="ColorRect" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)

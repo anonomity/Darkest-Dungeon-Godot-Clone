@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://5vd66q4by34k"]
-
-[ext_resource type="PackedScene" uid="uid://c6xd2875vf118" path="res://scenes/character.tscn" id="1_qpdt7"]
-[ext_resource type="Texture2D" uid="uid://c014rq2bp5ai2" path="res://assets/characters/Crusaderskin1.png" id="2_m58ko"]
-
-[node name="Crusader" instance=ExtResource("1_qpdt7")]
-image = ExtResource("2_m58ko")

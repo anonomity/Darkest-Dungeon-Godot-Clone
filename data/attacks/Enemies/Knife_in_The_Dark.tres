@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="attack_types" load_steps=2 format=3 uid="uid://bsw80wn5p10iq"]
+
+[ext_resource type="Script" path="res://scripts/attack_resource.gd" id="1_ku74t"]
+
+[resource]
+script = ExtResource("1_ku74t")
+name = "Knife_in_The_Dark"
+range = 0
+rank = Vector4(1, 1, 0, 0)
+target = Vector4(1, 1, 0, 0)
+damage = Vector2i(2, 4)
+accuracy = 63
+crit_mod = 6
+effect_vs = 8
+effect_dmg = 0

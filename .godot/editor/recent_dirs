@@ -1,6 +1,10 @@
-res://scenes/Rooms
-res://scenes/Character
 res://scripts
+res://assets/ui
+res://data/attacks/Enemies
+res://scenes/enemies
+res://scenes/Character
 res://scenes
-res://scenes/Crusader
+res://scenes/ui
+C:/Program Files (x86)/Steam/steamapps/common/Aseprite
+res://scenes/Rooms
 res://data/attacks

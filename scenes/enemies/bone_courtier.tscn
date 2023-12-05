@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxwm0weuxpsex"]
+
+[ext_resource type="PackedScene" uid="uid://utksyx4odi4p" path="res://scenes/Character/character_base.tscn" id="1_r2eyl"]
+[ext_resource type="PackedScene" uid="uid://b86unntxds0cm" path="res://assets/characters/enemies/Bone-courtier.ase" id="2_yd0nk"]
+
+[node name="bone_courtier" instance=ExtResource("1_r2eyl")]
+scale = Vector2(0.25, 0.25)
+HP = 10
+DODGE = 12.5
+SPEED = 8
+
+[node name="Bone-courtier" parent="." index="0" instance=ExtResource("2_yd0nk")]
+position = Vector2(28, -260)
+offset = Vector2(2, 0)
+region_rect = Rect2(0, 1549, 328, 532)
+
+[node name="AnimationPlayer" parent="Bone-courtier" index="0"]
+autoplay = "idle"
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(12, -328)
+
+[editable path="Bone-courtier"]
