@@ -12,7 +12,7 @@ enum Enemy_Type {UNHOLY, HUMAN, BEAST, STONEWORK, ELDRITCH, BLOODSUCKER, HUSK, O
 @export var rank : Vector4 = Vector4.ZERO
 @export var target : Vector4 = Vector4.ZERO
 
-@export var damage : int = 0
+@export var damage : Vector2i = Vector2.ZERO
 @export var accuracy : int = 0
 @export var crit_mod : int = 0
 @export var effect_vs : Enemy_Type = Enemy_Type.NONE

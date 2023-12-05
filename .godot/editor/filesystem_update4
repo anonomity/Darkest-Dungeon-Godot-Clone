@@ -3,3 +3,7 @@ res://scenes/Character/bone_courtier.tscn
 res://scenes/level_1.tscn
 res://scenes/Character/Crusader.tscn
 res://scenes/Ruins.tscn
+res://scripts/character.gd
+res://scenes/level_1.gd
+res://scripts/attack_resource.gd
+res://scenes/Character/character_base.tscn

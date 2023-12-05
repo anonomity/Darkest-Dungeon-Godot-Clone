@@ -13,3 +13,11 @@ config_version=5
 config/name="DarkestDungeon"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+CombatManager="*res://scripts/Combat_Manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/nklbdev.aseprite_importers/plugin.cfg")

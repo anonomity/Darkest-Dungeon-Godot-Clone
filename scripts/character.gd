@@ -1,10 +1,10 @@
 extends Node
 
-
-@export var ACC : int
+@export var HP : int
+@export var ACC_MOD : int
 @export var CRIT : int
-@export var DMG : int
-@export var DODGE : int
+@export var DMG : Vector2i
+@export var DODGE : float
 @export var PROT : int
 @export var SPEED: int
 
