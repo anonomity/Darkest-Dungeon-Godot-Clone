@@ -17,6 +17,8 @@ image = ExtResource("2_vqr6b")
 
 [node name="Crusader" parent="." index="0" instance=ExtResource("3_v3g58")]
 position = Vector2(12, -335)
+offset = Vector2(-13, 2)
+region_rect = Rect2(1026, 668, 342, 664)
 
 [node name="AnimationPlayer" parent="Crusader" index="0"]
 autoplay = "idle"
