@@ -41,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.491706)
 mesh = SubResource("PlaneMesh_h5qot")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.947076, 0.32101, 0, -0.32101, 0.947076, 0, 0.559678, 1.39456)
+transform = Transform3D(1, 0, 0, 0, 0.993365, 0.115007, 0, -0.115007, 0.993365, 0, 0.325278, 1.25145)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yo28b")
