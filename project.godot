@@ -21,6 +21,8 @@ aseprite_executable_path="C:/Program Files (x86)/Steam/steamapps/common/Aseprite
 [autoload]
 
 CombatManager="*res://scripts/Combat_Manager.gd"
+EnemyAndAttackInformation="*res://scripts/Global/Enemy_And_Attack_Information.gd"
+EventBus="*res://scripts/Global/EventBus.gd"
 
 [display]
 

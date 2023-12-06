@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh25wifwyjhpe"
+path="res://.godot/imported/gen_char_enemymovename {4be75fb4-bdf9-4a88-85c2-aca27c3f4ca0}.wav-dd28ac84d70700270ad9485122569632.sample"
+
+[deps]
+
+source_file="res://sounds/Enemy/gen_char_enemymovename {4be75fb4-bdf9-4a88-85c2-aca27c3f4ca0}.wav"
+dest_files=["res://.godot/imported/gen_char_enemymovename {4be75fb4-bdf9-4a88-85c2-aca27c3f4ca0}.wav-dd28ac84d70700270ad9485122569632.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

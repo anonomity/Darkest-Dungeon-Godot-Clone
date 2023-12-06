@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701805786
+::res://::1701884408
 icon.svg::CompressedTexture2D::685525408816653387::1701458143::1701458147::1::::<><>::
 README.md::TextFile::-1::1701795990::0::1::::<><>::
 README.ru.md::TextFile::-1::1701795990::0::1::::<><>::
@@ -19,7 +19,7 @@ sprite_frames.gd::GDScript::-1::1701795990::0::1::::<><>::
 texture_rect.gd::GDScript::-1::1701795990::0::1::::<><>::
 _animation_importer_base.gd::GDScript::-1::1701795990::0::1::::<><>::
 _importer_base.gd::GDScript::-1::1701795990::0::1::::<>EditorImportPlugin<>::
-::res://assets/::1701793551
+::res://assets/::1701884314
 backdrop.png::CompressedTexture2D::1161889016302848198::1701459299::1701459315::1::::<><>::
 floor.png::CompressedTexture2D::3317471582151358027::1701459303::1701459352::1::::<><>::
 ruins.png::CompressedTexture2D::2729609880211666731::1701459003::1701459079::1::::<><>::
@@ -35,6 +35,8 @@ Crusader_sprite_sheet.png::CompressedTexture2D::2814715636540456268::1701795861:
 ::res://assets/characters/heroes/::1701796846
 Crusader.png::CompressedTexture2D::108600318057995456::1701796846::1701796474::1::::<><>::
 Crusader_sprite_sheet.png::CompressedTexture2D::4195176995799171863::1701795962::1701795967::1::::<><>::
+::res://assets/fonts/::1701884324
+Darksoul.otf::FontFile::384887403913421792::1657376984::1701884324::1::::<><>::
 ::res://assets/ui/::1701801450
 CHEESE.PNG::CompressedTexture2D::8537097425052436915::1701793963::1701793966::1::::<><>::
 health_texture.PNG::CompressedTexture2D::8010088922241428688::1701793556::1701793558::1::::<><>::
@@ -42,29 +44,45 @@ select_char_ui.png::CompressedTexture2D::4158317804641171296::1701801445::170180
 stress_texture.PNG::CompressedTexture2D::6342780428937524300::1701793675::1701793678::1::::<><>::
 ::res://data/::1701461683
 ::res://data/attacks/::1701801104
-Smite.tres::Resource/attack_types::1474356173077829783::1701800700::0::1::::<><>::res://scripts/attack_resource.gd<>uid://46eccwu8xgxj::::res://assets/attacks/smite.PNG
-::res://data/attacks/Enemies/::1701801173
-Knife_in_The_Dark.tres::Resource/attack_types::3697285662356234180::1701801173::0::1::::<><>::res://scripts/attack_resource.gd
-::res://scenes/::1701805773
+Smite.tres::Resource/Resource::1474356173077829783::1701800700::0::1::::<><>::res://scripts/attack_resource.gd<>uid://46eccwu8xgxj::::res://assets/attacks/smite.PNG
+::res://data/attacks/Enemies/::1701877636
+::res://data/attacks/Enemies/bone_courtier/::1701882185
+Knife_in_The_Dark.tres::Resource/attack_types::3697285662356234180::1701882185::0::1::::<><>::res://scripts/attack_resource.gd
+Tempting_Goblet.tres::Resource/attack_types::5764514901374590674::1701882185::0::1::::<><>::res://scripts/attack_resource.gd
+::res://scenes/::1701885136
 character.tscn::PackedScene::6996408360017961781::1701795526::0::1::::<><>::uid://c014rq2bp5ai2::::res://assets/characters/Crusaderskin1.png<>res://scripts/character.gd
-game.tscn::PackedScene::2070983728391836225::1701805773::0::1::::<><>::res://scripts/game.gd<>uid://bkvb4rk0ede2h::::res://scenes/Rooms/chamber_1.tscn<>uid://dbcikqedf5qg1::::res://scenes/ui/canvas_layer.tscn<>uid://dpyeerw3y6dex::::res://scenes/Heroes/Crusader.tscn<>res://scripts/Heroes.gd<>uid://bxwm0weuxpsex::::res://scenes/enemies/bone_courtier.tscn<>res://scripts/Enemies.gd
+game.tscn::PackedScene::2070983728391836225::1701885136::0::1::::<><>::res://scripts/game.gd<>uid://bkvb4rk0ede2h::::res://scenes/Rooms/chamber_1.tscn<>uid://dbcikqedf5qg1::::res://scenes/ui/canvas_layer.tscn<>uid://dpyeerw3y6dex::::res://scenes/Heroes/Crusader.tscn<>res://scripts/Heroes.gd<>uid://bxwm0weuxpsex::::res://scenes/enemies/bone_courtier.tscn<>res://scripts/Enemies.gd<>uid://bsw80wn5p10iq::::res://data/attacks/Enemies/bone_courtier/Knife_in_The_Dark.tres<>uid://coemyoi5sik1w::::res://data/attacks/Enemies/bone_courtier/Tempting_Goblet.tres
 level_1.gd::GDScript::-1::1701794819::0::1::::<>Node3D<>::
 level_1.tscn::PackedScene::262978700784914124::1701795209::0::1::::<><>::uid://daulyu3jhqere::::res://scenes/Ruins.tscn<>res://scenes/level_1.gd<>uid://c6xd2875vf118::::res://scenes/character.tscn<>uid://ce26xm8jva7rx::::res://scenes/Character/bone_courtier.tscn<>res://scripts/attack_resource.gd<>uid://c014rq2bp5ai2::::res://assets/characters/Crusaderskin1.png<>uid://46eccwu8xgxj::::res://assets/attacks/smite.PNG<>uid://dmee82molq80k::::res://assets/ui/health_texture.PNG<>uid://cwmqwxax0gh13::::res://assets/ui/stress_texture.PNG<>uid://dtvo0n5cwykx4::::res://assets/ui/CHEESE.PNG
 Ruins.tscn::PackedScene::7201261446275081062::1701794201::0::1::::<><>::uid://qs3e3sx7c4ko::::res://assets/backdrop.png<>uid://bnjaji0jmhky2::::res://assets/floor.png
-::res://scenes/Character/::1701805772
-character_base.tscn::PackedScene::1443640661733105377::1701805772::0::1::::<><>::res://scripts/character.gd<>uid://b0ik5fbbjyixc::::res://assets/ui/select_char_ui.png
-::res://scenes/enemies/::1701805773
-bone_courtier.tscn::PackedScene::4046954809350956495::1701805773::0::1::::<><>::uid://utksyx4odi4p::::res://scenes/Character/character_base.tscn<>uid://b86unntxds0cm::::res://assets/characters/enemies/Bone-courtier.ase
-::res://scenes/Heroes/::1701805772
-Crusader.tscn::PackedScene::8261890711082044579::1701805772::0::1::::<><>::uid://utksyx4odi4p::::res://scenes/Character/character_base.tscn<>uid://vagov71b31d0::::res://data/attacks/Smite.tres<>uid://bsuvp4o0l77y::::res://assets/characters/heroes/Crusader.png<>uid://b4tmai4yt10pr::::res://assets/characters/heroes/Crusader.ase
-::res://scenes/Rooms/::1701805772
-chamber_1.tscn::PackedScene::3131774467411039653::1701805772::0::1::::<><>::uid://be5ijm7877452::::res://assets/ruins.png
+::res://scenes/Character/::1701885246
+character_base.tscn::PackedScene::1443640661733105377::1701885246::0::1::::<><>::res://scripts/character.gd<>uid://b0ik5fbbjyixc::::res://assets/ui/select_char_ui.png<>uid://b62ukg6ah3bwa::::res://sounds/Enemy/gen_char_enemyturn {18396ce1-185d-44b3-bf2b-5ff32f0b9209}.wav
+::res://scenes/enemies/::1701885255
+bone_courtier.tscn::PackedScene::4046954809350956495::1701885255::0::1::::<><>::uid://utksyx4odi4p::::res://scenes/Character/character_base.tscn<>uid://b86unntxds0cm::::res://assets/characters/enemies/Bone-courtier.ase<>uid://fqpblpa76ciq::::res://assets/fonts/Darksoul.otf<>uid://cpv1x8mlje24d::::res://sounds/Enemy/gen_char_death_enemy {aaa7eb1d-9c60-433b-8dab-16a54bfcff65}.wav
+::res://scenes/Heroes/::1701885136
+Crusader.tscn::PackedScene::8261890711082044579::1701885135::0::1::::<><>::uid://utksyx4odi4p::::res://scenes/Character/character_base.tscn<>uid://vagov71b31d0::::res://data/attacks/Smite.tres<>uid://bsuvp4o0l77y::::res://assets/characters/heroes/Crusader.png<>uid://b4tmai4yt10pr::::res://assets/characters/heroes/Crusader.ase
+::res://scenes/Rooms/::1701885135
+chamber_1.tscn::PackedScene::3131774467411039653::1701885135::0::1::::<><>::uid://be5ijm7877452::::res://assets/ruins.png
 ::res://scenes/ui/::1701802181
 canvas_layer.tscn::PackedScene::7234084090803641542::1701802181::0::1::::<><>::uid://46eccwu8xgxj::::res://assets/attacks/smite.PNG<>uid://dmee82molq80k::::res://assets/ui/health_texture.PNG<>uid://cwmqwxax0gh13::::res://assets/ui/stress_texture.PNG<>uid://dtvo0n5cwykx4::::res://assets/ui/CHEESE.PNG
-::res://scripts/::1701805661
-attack_resource.gd::GDScript::-1::1701795029::0::1::::attack_types<>Resource<>::
-character.gd::GDScript::-1::1701803831::0::1::::<>Node<>::
-Combat_Manager.gd::GDScript::-1::1701794627::0::1::::<>Node<>::
-Enemies.gd::GDScript::-1::1701805661::0::1::::<>Node2D<>::
-game.gd::GDScript::-1::1701804764::0::1::::<>Node2D<>::
+::res://scripts/::1701885038
+attack_resource.gd::GDScript::-1::1701880816::0::1::::attack_types<>Resource<>::
+character.gd::GDScript::-1::1701884978::0::1::::<>Node<>::
+Combat_Manager.gd::GDScript::-1::1701885027::0::1::::combat_packets<>Node<>::
+Enemies.gd::GDScript::-1::1701806110::0::1::::<>Node2D<>::
+game.gd::GDScript::-1::1701885038::0::1::::<>Node2D<>::
 Heroes.gd::GDScript::-1::1701803632::0::1::::<>Node2D<>::
+::res://scripts/Global/::1701883226
+Enemy_And_Attack_Information.gd::GDScript::-1::1701879153::0::1::::<>Node<>::
+EventBus.gd::GDScript::-1::1701883226::0::1::::<>Node<>::
+::res://sounds/::1701885313
+::res://sounds/ally_turn/::1701885323
+gen_char_allyturn.wav::AudioStreamWAV::5987859440167882126::1527955734::1701885327::1::::<><>::
+::res://sounds/bone_courtier/::1701884101
+char_en_sklco_daggerjab {b42f4068-f07c-40ad-9a84-ccac49545cdd}.wav::AudioStreamWAV::54850963987794765::1527946248::1701884101::1::::<><>::
+char_en_sklco_temptinggob {59fb2421-655d-4d06-a8c8-5af02a70e744}.wav::AudioStreamWAV::9150640626743337065::1527946237::1701884101::1::::<><>::
+char_en_sklco_temptinggob_miss {06119449-16e0-4322-bc27-4e9656ff6629}.wav::AudioStreamWAV::5635668648979932962::1527946240::1701884101::1::::<><>::
+::res://sounds/Enemy/::1701884812
+gen_char_death_enemy {aaa7eb1d-9c60-433b-8dab-16a54bfcff65}.wav::AudioStreamWAV::5870647422183897689::1527955740::1701884812::1::::<><>::
+gen_char_enemymovename {4be75fb4-bdf9-4a88-85c2-aca27c3f4ca0}.wav::AudioStreamWAV::7708183382096882406::1527955738::1701884812::1::::<><>::
+gen_char_enemyturn {18396ce1-185d-44b3-bf2b-5ff32f0b9209}.wav::AudioStreamWAV::4619245596665591680::1527955736::1701884812::1::::<><>::

@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://utksyx4odi4p"]
+[gd_scene load_steps=11 format=3 uid="uid://utksyx4odi4p"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_eitk0"]
 [ext_resource type="Texture2D" uid="uid://b0ik5fbbjyixc" path="res://assets/ui/select_char_ui.png" id="2_kw07r"]
+[ext_resource type="AudioStream" uid="uid://b62ukg6ah3bwa" path="res://sounds/Enemy/gen_char_enemyturn {18396ce1-185d-44b3-bf2b-5ff32f0b9209}.wav" id="3_2er34"]
+[ext_resource type="FontFile" uid="uid://fqpblpa76ciq" path="res://assets/fonts/Darksoul.otf" id="4_oymwd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oiv4p"]
 atlas = ExtResource("2_kw07r")
@@ -12,6 +14,90 @@ bg_color = Color(0.054902, 0.00784314, 0.00392157, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx6ph"]
 bg_color = Color(0.34902, 0.027451, 0.0196078, 1)
+
+[sub_resource type="Animation" id="Animation_t4xm1"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dmg_label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("dmg_label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-38, -536), Vector2(-38, -587.31)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("dmg_label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_arqc1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dmg_label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("dmg_label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, -536)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("dmg_label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ja7ls"]
+_data = {
+"RESET": SubResource("Animation_arqc1"),
+"hurt": SubResource("Animation_t4xm1")
+}
 
 [node name="character_base" type="Node2D"]
 script = ExtResource("1_eitk0")
@@ -97,3 +183,23 @@ color = Color(0.270588, 0.270588, 0.270588, 1)
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="turn_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2er34")
+volume_db = -4.555
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ja7ls")
+}
+
+[node name="dmg_label" type="Label" parent="."]
+visible = false
+offset_left = -38.0
+offset_top = -536.0
+offset_right = 124.0
+offset_bottom = -375.0
+theme_override_colors/font_color = Color(0.388235, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oymwd")
+theme_override_font_sizes/font_size = 120
+text = "60"

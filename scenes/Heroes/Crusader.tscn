@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpyeerw3y6dex"]
+[gd_scene load_steps=6 format=3 uid="uid://dpyeerw3y6dex"]
 
 [ext_resource type="PackedScene" uid="uid://utksyx4odi4p" path="res://scenes/Character/character_base.tscn" id="1_ebd8t"]
 [ext_resource type="Resource" uid="uid://vagov71b31d0" path="res://data/attacks/Smite.tres" id="2_oogyi"]
 [ext_resource type="Texture2D" uid="uid://bsuvp4o0l77y" path="res://assets/characters/heroes/Crusader.png" id="2_vqr6b"]
 [ext_resource type="PackedScene" uid="uid://b4tmai4yt10pr" path="res://assets/characters/heroes/Crusader.ase" id="3_v3g58"]
+[ext_resource type="AudioStream" uid="uid://crktf1xjl6b5g" path="res://sounds/ally_turn/gen_char_allyturn.wav" id="5_ks54e"]
 
 [node name="Crusader" instance=ExtResource("1_ebd8t")]
 scale = Vector2(0.25, 0.25)
@@ -22,5 +23,8 @@ region_rect = Rect2(1026, 668, 342, 664)
 
 [node name="AnimationPlayer" parent="Crusader" index="0"]
 autoplay = "idle"
+
+[node name="turn_sound" parent="." index="2"]
+stream = ExtResource("5_ks54e")
 
 [editable path="Crusader"]

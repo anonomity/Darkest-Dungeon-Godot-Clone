@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://4rg2ge45uyfx"]
+[gd_scene load_steps=11 format=3 uid="uid://4rg2ge45uyfx"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_g2n5e"]
 [ext_resource type="PackedScene" uid="uid://bkvb4rk0ede2h" path="res://scenes/Rooms/chamber_1.tscn" id="1_wmk4q"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://scripts/Heroes.gd" id="3_pj62c"]
 [ext_resource type="PackedScene" uid="uid://bxwm0weuxpsex" path="res://scenes/enemies/bone_courtier.tscn" id="4_ipcxt"]
 [ext_resource type="Script" path="res://scripts/Enemies.gd" id="5_5b142"]
+[ext_resource type="Resource" uid="uid://bsw80wn5p10iq" path="res://data/attacks/Enemies/bone_courtier/Knife_in_The_Dark.tres" id="7_in4w4"]
+[ext_resource type="Resource" uid="uid://coemyoi5sik1w" path="res://data/attacks/Enemies/bone_courtier/Tempting_Goblet.tres" id="8_f5mi2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hw2d8"]
 size = Vector2(75, 168)
@@ -24,25 +26,31 @@ script = ExtResource("3_pj62c")
 position = Vector2(426, 386)
 
 [node name="Crusader" parent="Chamber_1/Heroes/pos_1" instance=ExtResource("3_1eh4y")]
+HP = 20
+rank = 1
 
 [node name="pos_2" type="Node2D" parent="Chamber_1/Heroes"]
 position = Vector2(322, 386)
 
 [node name="Crusader" parent="Chamber_1/Heroes/pos_2" instance=ExtResource("3_1eh4y")]
+HP = 5
+rank = 2
 
 [node name="pos_3" type="Node2D" parent="Chamber_1/Heroes"]
 position = Vector2(218, 386)
 
 [node name="Crusader" parent="Chamber_1/Heroes/pos_3" instance=ExtResource("3_1eh4y")]
+rank = 3
 
 [node name="pos_4" type="Node2D" parent="Chamber_1/Heroes"]
 position = Vector2(114, 386)
 
 [node name="Crusader" parent="Chamber_1/Heroes/pos_4" instance=ExtResource("3_1eh4y")]
+HP = 27
+rank = 4
 
 [node name="Enemies" type="Node2D" parent="Chamber_1"]
-position = Vector2(1463, -6)
-scale = Vector2(-1, 1)
+position = Vector2(320, -6)
 script = ExtResource("5_5b142")
 
 [node name="pos_1" type="Node2D" parent="Chamber_1/Enemies"]
@@ -51,6 +59,8 @@ position = Vector2(722, 386)
 [node name="Enemy_1" type="Node2D" parent="Chamber_1/Enemies/pos_1"]
 
 [node name="bone_courtier" parent="Chamber_1/Enemies/pos_1/Enemy_1" instance=ExtResource("4_ipcxt")]
+rank = 1
+attacks = Array[Resource("res://scripts/attack_resource.gd")]([ExtResource("7_in4w4"), ExtResource("8_f5mi2")])
 
 [node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_1"]
 
@@ -64,6 +74,8 @@ position = Vector2(618, 388)
 [node name="Enemy_2" type="Node2D" parent="Chamber_1/Enemies/pos_2"]
 
 [node name="bone_courtier2" parent="Chamber_1/Enemies/pos_2/Enemy_2" instance=ExtResource("4_ipcxt")]
+rank = 2
+attacks = Array[Resource("res://scripts/attack_resource.gd")]([ExtResource("7_in4w4"), ExtResource("8_f5mi2")])
 
 [node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_2"]
 
@@ -77,6 +89,8 @@ position = Vector2(514, 388)
 [node name="Enemy_3" type="Node2D" parent="Chamber_1/Enemies/pos_3"]
 
 [node name="bone_courtier" parent="Chamber_1/Enemies/pos_3/Enemy_3" instance=ExtResource("4_ipcxt")]
+rank = 3
+attacks = Array[Resource("res://scripts/attack_resource.gd")]([ExtResource("7_in4w4"), ExtResource("8_f5mi2")])
 
 [node name="Area2D" type="Area2D" parent="Chamber_1/Enemies/pos_3"]
 
@@ -96,6 +110,8 @@ shape = SubResource("RectangleShape2D_hw2d8")
 [node name="Enemy_4" type="Node2D" parent="Chamber_1/Enemies/pos_4"]
 
 [node name="bone_courtier" parent="Chamber_1/Enemies/pos_4/Enemy_4" instance=ExtResource("4_ipcxt")]
+rank = 4
+attacks = Array[Resource("res://scripts/attack_resource.gd")]([ExtResource("7_in4w4"), ExtResource("8_f5mi2")])
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_1n6a7")]
 

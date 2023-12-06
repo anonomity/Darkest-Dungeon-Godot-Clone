@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b62ukg6ah3bwa"
+path="res://.godot/imported/gen_char_enemyturn {18396ce1-185d-44b3-bf2b-5ff32f0b9209}.wav-8af3cb1e420b449e38be2a9c9bc61253.sample"
+
+[deps]
+
+source_file="res://sounds/Enemy/gen_char_enemyturn {18396ce1-185d-44b3-bf2b-5ff32f0b9209}.wav"
+dest_files=["res://.godot/imported/gen_char_enemyturn {18396ce1-185d-44b3-bf2b-5ff32f0b9209}.wav-8af3cb1e420b449e38be2a9c9bc61253.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

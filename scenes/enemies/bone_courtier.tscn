@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxwm0weuxpsex"]
+[gd_scene load_steps=6 format=3 uid="uid://bxwm0weuxpsex"]
 
 [ext_resource type="PackedScene" uid="uid://utksyx4odi4p" path="res://scenes/Character/character_base.tscn" id="1_r2eyl"]
 [ext_resource type="PackedScene" uid="uid://b86unntxds0cm" path="res://assets/characters/enemies/Bone-courtier.ase" id="2_yd0nk"]
+[ext_resource type="FontFile" uid="uid://fqpblpa76ciq" path="res://assets/fonts/Darksoul.otf" id="3_u0mqm"]
+[ext_resource type="AudioStream" uid="uid://cpv1x8mlje24d" path="res://sounds/Enemy/gen_char_death_enemy {aaa7eb1d-9c60-433b-8dab-16a54bfcff65}.wav" id="5_1r37d"]
+[ext_resource type="AudioStream" uid="uid://1tnf16gsvub" path="res://sounds/bone_courtier/char_en_sklco_daggerjab {b42f4068-f07c-40ad-9a84-ccac49545cdd}.wav" id="5_7bplq"]
 
 [node name="bone_courtier" instance=ExtResource("1_r2eyl")]
 scale = Vector2(0.25, 0.25)
@@ -11,10 +14,30 @@ SPEED = 8
 
 [node name="Bone-courtier" parent="." index="0" instance=ExtResource("2_yd0nk")]
 position = Vector2(28, -260)
-offset = Vector2(2, 0)
-region_rect = Rect2(0, 1549, 328, 532)
+scale = Vector2(-1, 1)
+offset = Vector2(41, 16)
+region_rect = Rect2(0, 0, 547, 487)
 
 [node name="AnimationPlayer" parent="Bone-courtier" index="0"]
 autoplay = "idle"
+
+[node name="attack_name" type="Label" parent="." index="2"]
+offset_left = -300.0
+offset_top = -636.0
+offset_right = 368.0
+offset_bottom = -532.0
+theme_override_fonts/font = ExtResource("3_u0mqm")
+theme_override_font_sizes/font_size = 84
+horizontal_alignment = 1
+
+[node name="move_sound" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("5_1r37d")
+volume_db = -4.345
+
+[node name="attack_sound" type="AudioStreamPlayer2D" parent="." index="7"]
+stream = ExtResource("5_7bplq")
+volume_db = -3.45
+
+[connection signal="finished" from="attack_sound" to="." method="_on_attack_sound_finished"]
 
 [editable path="Bone-courtier"]

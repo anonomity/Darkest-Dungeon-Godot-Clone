@@ -6,10 +6,11 @@
 script = ExtResource("1_ku74t")
 name = "Knife_in_The_Dark"
 range = 0
-rank = Vector4(1, 1, 0, 0)
-target = Vector4(1, 1, 0, 0)
+rank = Array[int]([1, 1, 0, 0])
+target = Array[int]([1, 1, 0, 0])
 damage = Vector2i(2, 4)
 accuracy = 63
 crit_mod = 6
 effect_vs = 8
 effect_dmg = 0
+effect = 0

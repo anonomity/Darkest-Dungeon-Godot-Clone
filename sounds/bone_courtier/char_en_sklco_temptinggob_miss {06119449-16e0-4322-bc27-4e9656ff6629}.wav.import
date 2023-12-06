@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmj7vy801rxjm"
+path="res://.godot/imported/char_en_sklco_temptinggob_miss {06119449-16e0-4322-bc27-4e9656ff6629}.wav-2a2906c2f8498528b6c29ce48d7d35fd.sample"
+
+[deps]
+
+source_file="res://sounds/bone_courtier/char_en_sklco_temptinggob_miss {06119449-16e0-4322-bc27-4e9656ff6629}.wav"
+dest_files=["res://.godot/imported/char_en_sklco_temptinggob_miss {06119449-16e0-4322-bc27-4e9656ff6629}.wav-2a2906c2f8498528b6c29ce48d7d35fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
