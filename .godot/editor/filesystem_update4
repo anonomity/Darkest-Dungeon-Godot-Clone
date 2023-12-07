@@ -1,13 +1,7 @@
 res://scenes/Rooms/chamber_1.tscn
+res://data/attacks/Enemies/bone_courtier/Knife_in_The_Dark.tres
+res://data/attacks/Enemies/bone_courtier/Tempting_Goblet.tres
 res://scenes/Character/character_base.tscn
 res://scenes/Heroes/Crusader.tscn
 res://scenes/game.tscn
 res://scenes/enemies/bone_courtier.tscn
-res://scripts/game.gd
-res://scripts/Combat_Manager.gd
-res://scripts/character.gd
-res://data/attacks/Enemies/bone_courtier/Tempting_Goblet.tres
-res://scripts/attack_resource.gd
-res://data/attacks/Enemies/bone_courtier/Knife_in_The_Dark.tres
-res://scripts/Global/Enemy_And_Attack_Information.gd
-res://scripts/Global/EventBus.gd
